@@ -17,25 +17,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        play.setOnClickListener {
-            play1 = true
-        }
         reset.setOnClickListener {
             play1 = false
             a = 0
-            timer.text = "00:00"
         }
-
+        play.setOnClickListener {
+            play1 = !play1
+            current.text = "stopped"
+        }
         val timer1 = Timer("schedule", true);
         timer1.scheduleAtFixedRate(100, 100) {
             if(play1) {
                 a += 1
             }
             this@MainActivity.runOnUiThread(java.lang.Runnable {
-                timer.text = (a % 100).toString() + ":" + (a / 100).toString()
+                timer.text =  (a / 100).toString() + ":" +(a % 100).toString()
             })
-            
-
         }
     }
 
