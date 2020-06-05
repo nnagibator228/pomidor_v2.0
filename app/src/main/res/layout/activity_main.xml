@@ -46,6 +46,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="44dp"
         android:hint="время работы"
+        android:inputType="number"
         android:text="5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview12" />
@@ -56,6 +57,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="40dp"
         android:hint="время отдыха"
+        android:inputType="number"
         android:text="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -92,8 +94,13 @@
         android:id="@+id/meme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/current"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/working"
-        tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="195dp"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

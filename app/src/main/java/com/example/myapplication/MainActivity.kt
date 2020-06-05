@@ -35,13 +35,13 @@ class MainActivity : AppCompatActivity() {
             play1 = !play1
         }
         val timer1 = Timer("schedule", true);
-        timer1.scheduleAtFixedRate(100, 100) {
+        timer1.scheduleAtFixedRate(10, 10) {
             if(play1) {
                 a += 1
                 c += 1
                 try {
-                    a1 = work.text.toString().toInt()*100+2
-                    a2 = relax.text.toString().toInt()*100+2
+                    a1 = work.text.toString().replace(" ", "").toInt()*100+1
+                    a2 = relax.text.toString().replace(" ", "").toInt()*100+1
                 } catch (e: Exception){
                     a1 = 102
                     a2 = 102
@@ -60,12 +60,17 @@ class MainActivity : AppCompatActivity() {
             if(c == a1 && curr){
                 c = 0
                 current.text = "отдых"
-
+                this@MainActivity.runOnUiThread(java.lang.Runnable {
+                    meme.setImageResource(R.mipmap.chilling)
+                })
                 curr = !curr
             }
             if(c == a2 && !curr){
                 c = 0
                 current.text = "работа"
+                this@MainActivity.runOnUiThread(java.lang.Runnable {
+                    meme.setImageResource(R.mipmap.working)
+                })
                 curr = !curr
             }
         }
