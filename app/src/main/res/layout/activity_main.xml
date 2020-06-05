@@ -45,7 +45,7 @@
         android:layout_width="112dp"
         android:layout_height="40dp"
         android:layout_marginTop="44dp"
-        android:hint="hint"
+        android:hint="время работы"
         android:text="5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview12" />
@@ -55,15 +55,15 @@
         android:layout_width="111dp"
         android:layout_height="45dp"
         android:layout_marginTop="40dp"
-        android:hint="hint"
+        android:hint="время отдыха"
         android:text="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/current"
-        android:layout_width="178dp"
-        android:layout_height="33dp"
+        android:layout_width="73dp"
+        android:layout_height="42dp"
         android:layout_marginTop="56dp"
         android:text="работа"
         android:textSize="20sp"
@@ -83,7 +83,17 @@
         android:text="0:00"
         android:textSize="22sp"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintStart_toEndOf="@+id/play"
+        app:layout_constraintHorizontal_bias="0.989"
+        app:layout_constraintStart_toEndOf="@+id/textview12"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="MissingConstraints,UnknownId" />
+
+    <ImageView
+        android:id="@+id/meme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/working"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="195dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
